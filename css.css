@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #F3F5F6;
+}
+
+#contain {
+    margin: 50px auto;
+    width: 980px;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+#leftarea {
+    width: 210px;
+    height: 215px;
+    position: fixed;
+    top: 50px;
+    left: 15%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 18px 25px;
+    user-select: none;
+}
+
+#previewbutton {
+    width: 210px;
+    height: 24px;
+    position: fixed;
+    top: 321px;
+    left: 15%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px 25px;
+    user-select: none;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #8C8C8C;
+    cursor: pointer;
+}
+
+#previewbutton:hover {
+    color: #0084FF;
+    transition: .6s;
+}
+
+#type {
+    margin: 0 57px 15px 57px;
+}
+
+.typehover {
+    background-image: url("images/typehover.png");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: 8px 8px;
+}
+
+
+.leftnormal {
+    width: 76px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    color: #8C8C8C;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.leftnormal:hover {
+    cursor: pointer;
+}
+
+.leftchecked {
+    color: white;
+    background-color: #0084FF;
+}
+
+.typechoose {
+    height: 34px;
+    width: 100px;
+    border: 1px solid #CBCBCB;
+    box-sizing: border-box;
+    padding-left: 32px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    float: left;
+    line-height: 32px;
+    color: #A19F9F;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: .6s;
+    user-select: none;
+}
+
+.typechoose:hover {
+    border: 1px solid #0084FF;
+    color: #0084FF;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.first {
+    margin-right: 10px;
+}
+
+#radio {
+    background-image: url("images/radio.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#checkbox {
+    background-image: url("images/check.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#star {
+    background-image: url("images/starbutton.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#write {
+    background-image: url("images/write.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#photo {
+    background-image: url("images/photo.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#mark {
+    background-image: url("images/mark.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#libra {
+    background-image: url("images/libra.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#full {
+    background-image: url("images/full.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+#full:hover {
+    background-image: url("images/fullhover.png");
+}
+
+#libra:hover {
+    background-image: url("images/librahover.png");
+}
+
+#mark:hover {
+    background-image: url("images/markhover.png");
+}
+
+#photo:hover {
+    background-image: url("images/photohover.png");
+}
+
+#write:hover {
+    background-image: url("images/writehover.png");
+}
+
+#star:hover {
+    background-image: url("images/starbuttonhover.png");
+}
+
+#checkbox:hover {
+    background-image: url("images/checkhover.png");
+}
+
+#radio:hover {
+    background-image: url("images/radiohover.png");
+}
+
+
+#int {
+    width: 700px;
+    float: right;
+    height: 100px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+    color: #484848;
+    user-select: none;
+}
+
+#box {
+    width: 700px;
+    float: right;
+    position: relative;
+}
+
+/*#boxnone {
+    height: 500px;
+    border: 1px dashed #646464;
+    box-sizing: border-box;
+    border-radius: 8px;
+    line-height: 500px;
+    text-align: center;
+    color: #646464;
+    user-select: none;
+}*/
+
+
+.question {
+    background-color: white;
+    border-radius: 8px;
+    width: 700px;
+    padding: 20px 60px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 2px solid white;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    user-select: none;
+    opacity: 1;
+}
+
+.index {
+    font-size: 18px;
+    font-weight: bold;
+    color: #484848;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    line-height: 34px;
+}
+
+.trash {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/trash.png");
+    background-size: cover;
+    top: 25px;
+    right: 60px;
+    transition: .5s;
+    display: none;
+
+}
+
+.trash:hover {
+    background-image: url("images/trashhover.png");
+    background-size: cover;
+    transition: .5s;
+}
+
+.trash a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.move {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/move.png");
+    background-size: cover;
+    top: 25px;
+    right: 115px;
+    transition: .5s;
+    display: none;
+}
+
+.move:hover {
+    background-image: url("images/movehover.png");
+    background-size: cover;
+    transition: .5s;
+}
+
+.move a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.qheader {
+    width: 400px;
+    height: 34px;
+    border: 1px solid white;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 34px;
+    box-sizing: border-box;
+    color: #484848;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.raddiv {
+    width: 540px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px 8px 0px;
+    position: relative;
+}
+
+.radio-point {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.check-point {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.rad-answer {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 39px;
+}
+
+.tips {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.add {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 5px;
+    background-image: url("images/add.png");
+    background-size: cover;
+    display: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.add:hover {
+    background-image: url("images/addhover.png");
+    background-size: cover;
+    transition: .5s;
+}
+
+.reduce {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-right: 65px;
+    margin-top: 5px;
+    background-image: url("images/reduce.png");
+    background-size: cover;
+    display: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.reduce:hover {
+    background-image: url("images/reducehover.png");
+    background-size: cover;
+    transition: .5s;
+}
+
+.blue {
+    width: 700px;
+    height: 8px;
+    margin: -10px 0 10px;
+    background-color: #0084FF;
+}
+
+.star-total {
+    width: 540px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 5px 8px 0px;
+    padding-left: 15px;
+}
+
+.star-total span {
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+    background-image: url("images/star.png");
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.writebox {
+    width: 540px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 5px 8px 15px;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.white {
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+    background-image: url("images/star.png");
+    background-size: cover;
+    margin-right: 20px;
+    transition: .3s;
+}
+
+.light {
+    background-image: url("images/lightstar.png");
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+.starbox {
+    width: 540px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 5px 8px 0px;
+    padding-left: 15px;
+}

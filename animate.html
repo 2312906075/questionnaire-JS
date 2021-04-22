@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #bigbox {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        background-color: #3986ac;
+    }
+
+    #smallbox {
+        width: 100px;
+        height: 100px;
+        background-color: #0084FF;
+    }
+</style>
+<body>
+<div id="bigbox">
+
+</div>
+<div id="smallbox">
+</div>
+</body>
+
+<script>
+    /*获取指定样式的属性值*/
+    function getStylePropertyValue(dom, property) {
+        if (window.getComputedStyle) { //標準瀏覽器
+            //
+            return getComputedStyle(dom, null)[property];
+        } else {
+            return dom.currentStyle[property]; //IE瀏覽器
+        }
+
+    }
+    function animate(dom, o, time, fn) {
+        if (time == undefined) {  //默认的切换频率
+            time = 10;
+        }
+        //dom.termId :为每一个运动的物体添加一个属于自己的线程标识
+        clearInterval(dom.termId);
+        dom.termId = setInterval(function () { //创建一个定时器，实现运动
+            dom.isOver = true; //是否可以停止定時器
+            for (var property in o) {
+                if (property == "opacity") {//如果是透明度
+                    var currentValue = parseInt(getStylePropertyValue(dom, property) * 100); //当前样式属性的值
+                } else {//其他样式属性
+                    var currentValue = parseInt(getStylePropertyValue(dom, property));
+                    /*当前样式属性的值*/
+                }
+                //速度   正速度  负速度
+                var speed = (o[property] - currentValue) / 10;
+                // 三元表达式  三目运算符
+                speed = currentValue > o[property] ? Math.floor(speed) : Math.ceil(speed)
+                currentValue += speed; //改变样式属性的值
+
+                if (currentValue != o[property]) {
+                    dom.isOver = false; //標識不停止定時器
+                }
+
+                if (property == "opacity") {
+                    dom.style.opacity = currentValue / 100;
+                    dom.style.filter = 'alpha(opacity= ' + currentValue + ')';
+                } else {
+                    dom.style[property] = currentValue + "px"; //改变物体的样式属性值
+                }
+
+            }
+
+            if (dom.isOver) {  //停止定时器
+                clearInterval(dom.termId);
+                if (fn) {  //执行回调函数
+                    fn();
+                }
+            }
+
+        }, time)  //基于切换的频率来改变运动的快慢
+
+    }
+
+
+
+    let sbox = document.getElementById("smallbox");
+    let bbox = document.getElementById("bigbox");
+
+
+    bbox.onclick=function () {
+        console.log('111');
+        animate(sbox,{width:300},12)
+        console.log('123');
+    }
+</script>
+</html>
